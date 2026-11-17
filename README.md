@@ -85,6 +85,10 @@ Web Crypto・Service Workerの利用にはHTTPSまたはlocalhostが必要です
 
 ## スクリーンショット
 
+![今日の入荷](docs/screenshots/01-arrivals.png)
+
+02〜04はスマートフォン幅（390×844）、01と05はデスクトップ幅（1440px）で公開URLから撮影しています。
+
 | 画面       | 画像                                                      |
 | ---------- | --------------------------------------------------------- |
 | 今日の入荷 | [01-arrivals.png](docs/screenshots/01-arrivals.png)       |
