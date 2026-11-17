@@ -1,0 +1,270 @@
+/* 納品詳細・検品の操作 */
+.delivery-meta {
+  padding: 22px 24px;
+}
+dl {
+  margin: 0;
+}
+.delivery-meta dl,
+.record-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+dt {
+  color: #7b8b93;
+  font-size: 11px;
+}
+dd {
+  margin: 4px 0 0;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.memo {
+  font-size: 12px;
+  color: #6d7c85;
+  background: #f8fafb;
+  padding: 10px 12px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+.delivery-meta .button-group {
+  margin-top: 18px;
+}
+.delivery-meta button {
+  font-size: 12px;
+}
+.inspection-progress {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #f5f7f8f5;
+  padding: 22px 0 18px;
+}
+.inspection-progress > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inspection-progress span {
+  color: #a07832;
+  font-size: 12px;
+}
+.inspection-progress .progress-track {
+  max-width: none;
+  height: 6px;
+  margin-top: 13px;
+}
+.inspection-line {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px 24px;
+  margin-bottom: 18px;
+}
+.inspection-line.has-issue {
+  border-color: #e7d1a8;
+}
+.line-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.line-heading h3 {
+  margin-bottom: 3px;
+}
+.line-number {
+  border: 1px solid #dce3e7;
+  border-radius: 8px;
+  width: 37px;
+  height: 40px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #84939c;
+  font-size: 12px;
+}
+.line-number.done {
+  background: #eaf4ed;
+  color: #538465;
+  border-color: #d4e5da;
+  font-size: 18px;
+}
+.line-badges {
+  display: flex;
+  gap: 5px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+.line-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  align-items: end;
+  margin-bottom: 16px;
+}
+.line-controls select {
+  height: 56px;
+}
+.quantity {
+  display: flex;
+  height: 56px;
+}
+.quantity button {
+  border-radius: 0;
+  flex: 0 0 46px;
+  font-size: 20px;
+  padding: 4px;
+}
+.quantity button:first-child {
+  border-radius: 6px 0 0 6px;
+}
+.quantity button:last-child {
+  border-radius: 0 6px 6px 0;
+}
+.quantity input {
+  border-radius: 0;
+  text-align: center;
+  border-left: 0;
+  border-right: 0;
+  font-size: 18px;
+  padding: 8px 2px;
+  appearance: textfield;
+}
+.quantity input::-webkit-inner-spin-button {
+  appearance: none;
+}
+.ok-button {
+  height: 56px;
+  color: #2d6c4f;
+  background: #edf6ee;
+  border-color: #a4c6af;
+  font-size: 19px;
+  gap: 10px;
+}
+.ok-button span {
+  font-size: 11px;
+}
+.issue-details {
+  background: #fffcf5;
+  border: 1px solid #f0e5cc;
+  padding: 18px;
+  margin-top: 16px;
+  border-radius: 7px;
+}
+.issue-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: #98752f;
+  margin-bottom: 16px;
+}
+.issue-title small {
+  font-size: 11px;
+}
+.confirm-line {
+  margin-top: 16px;
+  font-size: 12px;
+}
+.sign-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 22px;
+  background: #eaf2ec;
+  border: 1px solid #d4e3d8;
+  border-radius: 9px;
+  margin-top: 25px;
+}
+.sign-bar small {
+  display: block;
+  margin-top: 4px;
+}
+
+/* 写真の入力・拡大 */
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+.photo-item {
+  width: 130px;
+}
+.photo-button {
+  padding: 0;
+  overflow: hidden;
+  width: 130px;
+  height: 95px;
+  border-radius: 6px;
+}
+.photo-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-item .text-button {
+  width: 100%;
+  font-size: 11px;
+}
+.photo-add {
+  position: relative;
+  overflow: hidden;
+  width: 130px;
+  min-height: 95px;
+  border: 1px dashed #bccdbf;
+  border-radius: 6px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  color: #7a937e;
+  cursor: pointer;
+  gap: 0;
+}
+.photo-add span {
+  font-size: 11px;
+}
+.photo-add small {
+  font-size: 11px;
+}
+.photo-add input {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.photo-add:focus-within {
+  outline: 2px solid #4b9073;
+}
+.photo-missing {
+  width: 130px;
+  height: 95px;
+  background: #f4f0ed;
+  border: 1px dashed #cabeb5;
+  color: #8a7262;
+  font-size: 11px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.photo-lightbox {
+  max-width: 900px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+.photo-lightbox img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 8px;
+}

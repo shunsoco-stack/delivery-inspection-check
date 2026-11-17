@@ -1,0 +1,74 @@
+/* 印刷・PDF保存 */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+  body {
+    background: white;
+    font-size: 11px;
+  }
+  .sidebar,
+  .topbar,
+  .page-footer,
+  .no-print,
+  .toast,
+  .offline,
+  .skip-link {
+    display: none !important;
+  }
+  .main-shell {
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    padding: 0;
+    margin: 0;
+    max-width: none;
+  }
+  .record-sheet {
+    border: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .record-heading {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+  .record-line {
+    padding: 12px 0;
+  }
+  .record-signoff {
+    grid-template-columns: 1fr 1fr;
+  }
+  .record-meta {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .photo-button {
+    border: 0;
+    width: 95px;
+    height: 65px;
+  }
+  .photo-item {
+    width: 95px;
+  }
+  .photo-grid {
+    gap: 10px;
+  }
+  .print-only {
+    display: inline;
+  }
+  .badge {
+    print-color-adjust: exact;
+  }
+  .fingerprint details {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

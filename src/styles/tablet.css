@@ -1,0 +1,65 @@
+/* タブレット */
+@media (min-width: 1600px) {
+  body {
+    font-size: 15px;
+  }
+  .supplier-cell strong {
+    font-size: 13px;
+  }
+  .supplier-cell small,
+  .arrival-cell small {
+    font-size: 11px;
+  }
+  .stat-label {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 215px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .main-shell {
+    margin-left: 215px;
+  }
+  main {
+    padding: 28px 24px;
+  }
+  .topbar {
+    padding: 0 24px;
+  }
+  .stat-grid {
+    gap: 12px;
+  }
+  .stat-card {
+    padding: 14px;
+  }
+  .list-columns,
+  .delivery-row {
+    gap: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
+    grid-template-columns: 2fr 1.2fr 1fr 0.9fr 8px;
+  }
+  .supplier-cell {
+    gap: 8px;
+  }
+  .package-icon {
+    display: none;
+  }
+  .page-heading {
+    align-items: flex-start;
+  }
+  .heading-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 260px;
+  }
+  .line-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ok-button {
+    grid-column: span 2;
+  }
+}

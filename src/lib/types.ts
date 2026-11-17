@@ -1,0 +1,44 @@
+export const conditions = ["良好", "破損", "汚れ・濡れ", "品違い", "期限・ロット違い"] as const;
+export const policies = ["返品", "再納品依頼", "受け入れ（そのまま使用）", "確認中"] as const;
+export const resolutions = ["未対応", "連絡済み", "解決"] as const;
+export const statuses = ["未着", "検品中", "差異あり", "検収済み", "受取拒否"] as const;
+export const results = ["すべて良好で検収", "差異ありで条件付き検収", "受取拒否"] as const;
+export type Line = {
+  id: string;
+  name: string;
+  code: string;
+  unit: string;
+  expected: number;
+  actual: number | null;
+  checked: boolean;
+  condition: (typeof conditions)[number];
+  comment: string;
+  photos: string[];
+  policy: (typeof policies)[number];
+  resolution: (typeof resolutions)[number];
+};
+export type Receipt = {
+  name: string;
+  at: string;
+  result: (typeof results)[number];
+  comment: string;
+  signature: string;
+  hash: string;
+};
+export type Cancellation = { reason: string; at: string; receipt: Receipt };
+export type Delivery = {
+  id: string;
+  number: string;
+  supplier: string;
+  order: string;
+  scheduled: string;
+  arrived: string;
+  location: string;
+  person: string;
+  memo: string;
+  lines: Line[];
+  receipt: Receipt | null;
+  history: Cancellation[];
+};
+export type Store = { version: 1; deliveries: Delivery[] };
+export type Issue = { delivery: Delivery; line: Line };

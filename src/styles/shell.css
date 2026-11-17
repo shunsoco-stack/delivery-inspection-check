@@ -1,0 +1,227 @@
+/* アプリの共通フレーム */
+.sidebar {
+  position: fixed;
+  width: 242px;
+  inset: 0 auto 0 0;
+  background: #fff;
+  border-right: 1px solid var(--border);
+  padding: 33px 20px 20px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+}
+.brand {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  padding: 0 3px;
+  font-weight: 750;
+  font-size: 21px;
+  letter-spacing: -0.6px;
+}
+.brand-mark {
+  background: #224f40;
+  color: #e0f2cb;
+  border-radius: 10px;
+  width: 37px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+}
+.brand-small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1.3px;
+  color: #7b8988;
+  margin-top: 1px;
+}
+.workspace {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 13px 11px;
+  margin: 35px 0 25px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.workspace small {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+}
+.workspace-icon {
+  color: #6d817a;
+  font-size: 24px;
+}
+.nav-caption {
+  font-size: 11px;
+  letter-spacing: 1.7px;
+  color: #647680;
+  margin-left: 12px;
+  margin-bottom: 10px;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 13px;
+  margin: 5px 0;
+  font-size: 12px;
+  min-height: 46px;
+  color: #64717a;
+  border-radius: 7px;
+}
+.nav-link.active {
+  background: #eaf2ed;
+  color: #236448;
+  font-weight: 700;
+}
+.nav-symbol {
+  font-size: 21px;
+  width: 22px;
+  text-align: center;
+  line-height: 1;
+}
+.nav-dot {
+  margin-left: auto;
+  height: 6px;
+  width: 6px;
+  background: #43886b;
+  border-radius: 50%;
+}
+.sidebar-note {
+  margin: auto 6px 25px;
+  border-top: 1px solid var(--border);
+  padding-top: 22px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.sidebar-note p {
+  font-size: 11px;
+  color: #647680;
+  font-weight: 400;
+  margin: 8px 0 0 13px;
+  line-height: 1.9;
+}
+.online-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5b9475;
+  margin-right: 6px;
+}
+.sidebar-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #647680;
+  border-top: 1px solid var(--border);
+  padding: 17px 5px 0;
+}
+.main-shell {
+  margin-left: 242px;
+  min-width: 0;
+}
+.topbar {
+  height: 73px;
+  background: #ffffffbb;
+  border-bottom: 1px solid var(--border);
+  padding: 0 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #60717d;
+}
+.slash {
+  padding: 0 12px;
+  color: #bcc7cc;
+}
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.demo-pill {
+  border: 1px solid #dce4df;
+  background: #f7faf7;
+  border-radius: 4px;
+  padding: 5px 9px;
+  font-size: 11px;
+  color: #5e7867;
+}
+.avatar {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e7ebe6;
+  color: #54705c;
+}
+main {
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 35px 38px;
+  min-height: calc(100vh - 130px);
+}
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 26px;
+}
+.page-heading .muted {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.heading-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.heading-actions .button,
+.heading-actions button {
+  font-size: 12px;
+}
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 38px 24px;
+  color: #647680;
+  font-size: 11px;
+}
+.panel {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 21px 24px;
+}
+.section-header p {
+  color: var(--muted);
+  font-size: 11px;
+  margin: 4px 0 0;
+}
+.count-chip {
+  background: #eef2f3;
+  color: #647781;
+  font-size: 11px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  margin-left: 7px;
+  vertical-align: middle;
+}

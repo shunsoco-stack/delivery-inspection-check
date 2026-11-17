@@ -1,0 +1,375 @@
+/* スマートフォン・下部タブバー */
+@media (max-width: 760px) {
+  body {
+    font-size: 14px;
+  }
+  .sidebar {
+    position: fixed;
+    inset: auto 0 0;
+    height: calc(68px + env(safe-area-inset-bottom));
+    width: 100%;
+    padding: 0 8px env(safe-area-inset-bottom);
+    border: 0;
+    border-top: 1px solid #dae3dd;
+    background: #fffffff5;
+  }
+  .sidebar > :not(nav) {
+    display: none;
+  }
+  .sidebar nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .nav-link {
+    flex-direction: column;
+    padding: 9px 1px 7px;
+    gap: 5px;
+    margin: 0;
+    font-size: 11px;
+    border-radius: 0;
+    min-height: 66px;
+  }
+  .nav-link.active {
+    background: transparent;
+    color: #28734f;
+    box-shadow: inset 0 2px #347e5a;
+  }
+  .nav-symbol {
+    font-size: 23px;
+  }
+  .nav-dot {
+    display: none;
+  }
+  .main-shell {
+    margin-left: 0;
+    padding-bottom: 75px;
+  }
+  .topbar {
+    height: 58px;
+    padding: 0 18px;
+    font-size: 11px;
+  }
+  .topbar-right {
+    gap: 7px;
+  }
+  .demo-pill {
+    font-size: 11px;
+    padding: 4px 5px;
+  }
+  .avatar {
+    display: none;
+  }
+  .slash {
+    padding: 0 5px;
+  }
+  main {
+    padding: 26px 16px;
+    min-height: calc(100vh - 190px);
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .page-heading {
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 23px;
+  }
+  .page-heading .muted {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .heading-actions {
+    max-width: none;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .heading-actions .primary {
+    flex: 1;
+  }
+  .stat-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .stat-card {
+    padding: 16px 14px 12px;
+  }
+  .stat-value {
+    font-size: 35px;
+    margin-top: 4px;
+  }
+  .stat-label {
+    font-size: 11px;
+  }
+  .stat-icon {
+    height: 25px;
+    width: 25px;
+    font-size: 15px;
+  }
+  .stat-card p {
+    font-size: 11px;
+  }
+  .date-strip-right {
+    display: none;
+  }
+  .attention-banner {
+    gap: 10px;
+    padding: 16px 13px;
+    flex-wrap: wrap;
+  }
+  .attention-banner strong {
+    font-size: 11px;
+  }
+  .attention-banner div {
+    flex: 1;
+  }
+  .attention-banner div > span {
+    font-size: 11px;
+  }
+  .banner-link {
+    padding-left: 30px;
+    margin-left: 0;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  .section-header {
+    padding: 17px;
+  }
+  .section-header h2 {
+    font-size: 15px;
+  }
+  .section-header .text-link {
+    font-size: 11px;
+  }
+  .tabs {
+    padding: 0 17px;
+    gap: 25px;
+  }
+  .list-columns {
+    display: none;
+  }
+  .delivery-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 13px 10px;
+    padding: 18px;
+    position: relative;
+  }
+  .supplier-cell {
+    grid-column: span 2;
+    padding-right: 12px;
+  }
+  .supplier-cell strong {
+    font-size: 13px;
+  }
+  .supplier-cell small {
+    font-size: 11px;
+  }
+  .package-icon {
+    display: grid;
+  }
+  .arrival-cell {
+    display: none;
+  }
+  .progress-cell {
+    padding-left: 43px;
+  }
+  .delivery-row > div:nth-child(4) {
+    justify-self: end;
+  }
+  .row-arrow {
+    position: absolute;
+    top: 22px;
+    right: 15px;
+  }
+  .issue-count {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .dashboard-bottom {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .recent-row {
+    padding: 16px;
+  }
+  .recent-row strong {
+    font-size: 12px;
+  }
+  .guide-card {
+    padding: 23px;
+  }
+  .guide-card h2 br {
+    display: none;
+  }
+  .page-footer {
+    padding: 10px 16px 20px;
+    font-size: 11px;
+  }
+  .filters {
+    padding: 17px;
+    gap: 12px;
+  }
+  .filters label {
+    flex-basis: 130px;
+  }
+  .filters input,
+  .filters select {
+    font-size: 13px;
+  }
+  .delivery-meta {
+    padding: 18px;
+  }
+  .delivery-meta dl {
+    grid-template-columns: 1fr 1fr;
+  }
+  .delivery-meta dd {
+    font-size: 12px;
+  }
+  .delivery-meta .button-group > * {
+    flex: 1;
+  }
+  .inspection-line {
+    padding: 18px 15px;
+  }
+  .line-heading {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .line-heading h3 {
+    font-size: 14px;
+  }
+  .line-heading > div:nth-child(2) {
+    flex: 1;
+    min-width: 0;
+  }
+  .line-badges {
+    margin-left: 46px;
+  }
+  .line-controls {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 12px;
+  }
+  .quantity button {
+    flex-basis: 44px;
+  }
+  .quantity input {
+    font-size: 16px;
+  }
+  .line-controls select {
+    padding: 8px;
+    font-size: 12px;
+  }
+  .ok-button {
+    height: 60px;
+  }
+  .issue-details {
+    padding: 12px;
+  }
+  .issue-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .issue-details .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .sign-bar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px;
+  }
+  .sign-bar .button {
+    min-height: 56px;
+  }
+  .photo-item,
+  .photo-button,
+  .photo-add,
+  .photo-missing {
+    width: 120px;
+  }
+  .sign-form {
+    padding: 19px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .signature-pad canvas {
+    height: 190px;
+  }
+  .signature-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .record-sheet {
+    padding: 22px 17px;
+  }
+  .record-heading h1 {
+    font-size: 21px;
+  }
+  .record-heading .eyebrow {
+    font-size: 7px;
+    letter-spacing: 0.7px;
+  }
+  .record-seal {
+    width: 65px;
+    height: 65px;
+  }
+  .record-meta {
+    gap: 16px 10px;
+  }
+  .record-quantities {
+    gap: 10px;
+  }
+  .record-issue {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .record-signoff {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .issue-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .issue-card,
+  .prose {
+    padding: 20px;
+  }
+  .issue-card-top {
+    flex-wrap: wrap;
+  }
+  .issue-card-footer {
+    flex-wrap: wrap;
+  }
+  .modal-backdrop {
+    padding: 10px;
+  }
+  .modal {
+    max-height: 94dvh;
+  }
+  .editor-form {
+    padding: 17px;
+  }
+  .edit-line {
+    padding: 12px;
+  }
+  .edit-line-title .button-group {
+    gap: 5px;
+  }
+  .edit-line-title button {
+    padding: 8px 10px;
+  }
+  .form-grid.thirds {
+    gap: 8px;
+  }
+  .toast {
+    margin: 8px;
+    font-size: 12px;
+  }
+  input,
+  textarea {
+    font-size: 16px;
+  }
+}

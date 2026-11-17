@@ -1,0 +1,210 @@
+/* 基本・デザイントークン */
+:root {
+  --ink: #23333e;
+  --muted: #63727e;
+  --green: #236851;
+  --border: #e1e6e9;
+  --paper: #fff;
+  --background: #f5f7f8;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--ink);
+  font:
+    14px/1.65 Arial,
+    "Noto Sans JP",
+    "Yu Gothic",
+    Meiryo,
+    sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+.button {
+  min-height: 44px;
+  border: 1px solid #d5dde1;
+  background: white;
+  color: var(--ink);
+  border-radius: 7px;
+  padding: 10px 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+button:hover,
+.button:hover {
+  background: #edf3ef;
+  border-color: #93b3a5;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+.primary {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+  box-shadow: 0 2px 3px #163d2510;
+}
+.primary:hover {
+  background: #174c3b;
+  color: white;
+}
+.danger {
+  background: #a03e37;
+  color: white;
+}
+.danger-text {
+  color: #a03e37;
+}
+.wide {
+  width: 100%;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #cbd4d8;
+  border-radius: 6px;
+  background: white;
+  color: var(--ink);
+  padding: 10px 12px;
+  min-height: 44px;
+}
+textarea {
+  resize: vertical;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #4b9073;
+  outline-offset: 2px;
+}
+:focus-visible {
+  outline: 3px solid #40826a;
+  outline-offset: 3px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4f626b;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1 {
+  font-size: 28px;
+  line-height: 1.45;
+  letter-spacing: -0.7px;
+  margin-bottom: 8px;
+}
+h2 {
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+h3 {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+small {
+  font-size: 11px;
+  color: var(--muted);
+}
+strong {
+  font-weight: 650;
+}
+.muted {
+  color: var(--muted);
+}
+.hint {
+  margin-top: 16px;
+  font-size: 12px;
+}
+.separator {
+  margin: 0 8px;
+  color: #a8b2b7;
+}
+.button-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.text-link,
+.text-button {
+  color: var(--green);
+  font-weight: 600;
+  font-size: 12px;
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.text-button {
+  border: 0;
+  background: transparent;
+  padding: 6px 10px;
+}
+.back-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--muted);
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  color: #5d7d70;
+  margin-bottom: 8px;
+}
+.empty {
+  padding: 55px 20px;
+  text-align: center;
+  color: var(--muted);
+}
+.empty .button {
+  margin: 16px;
+}
+.skip-link {
+  position: fixed;
+  left: 20px;
+  top: -80px;
+  z-index: 100;
+  background: white;
+  padding: 12px;
+}
+.skip-link:focus {
+  top: 10px;
+}

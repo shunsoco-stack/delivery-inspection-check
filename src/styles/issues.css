@@ -1,0 +1,78 @@
+/* 不備一覧・デモ説明 */
+.issue-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.issue-card {
+  padding: 22px;
+}
+.issue-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.issue-card h2 {
+  margin-bottom: 12px;
+}
+.issue-card .button-group > span:last-child {
+  font-size: 12px;
+}
+.issue-card > p {
+  color: #657582;
+  margin-top: 14px;
+}
+.issue-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 18px 0;
+  font-size: 12px;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+.prose {
+  padding: 28px;
+}
+.prose p {
+  color: #657680;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.prose h2 {
+  margin-bottom: 18px;
+}
+.prose h3 {
+  margin-top: 28px;
+}
+.prose dt {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+.prose dd {
+  margin: 5px 0;
+  color: #698372;
+}
+.usage {
+  display: flex;
+  justify-content: space-between;
+  background: #f1f6f2;
+  padding: 18px;
+  border-radius: 8px;
+  align-items: center;
+}
+.usage strong {
+  font-size: 22px;
+}
+.usage span {
+  color: #6a8072;
+  font-size: 12px;
+}

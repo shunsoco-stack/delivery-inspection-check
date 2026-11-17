@@ -1,0 +1,337 @@
+/* 今日の入荷・件数カード */
+.date-strip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  margin: 0 0 15px;
+  color: #647680;
+}
+.date-strip strong {
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  color: #53636c;
+}
+.date-strip-right {
+  margin-left: auto;
+  font-size: 11px;
+}
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+  margin-bottom: 24px;
+}
+.stat-card {
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: white;
+  padding: 19px 20px 14px;
+  transition: transform 0.15s;
+}
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+.stat-label {
+  font-size: 11px;
+  color: #64737e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.stat-icon {
+  height: 30px;
+  width: 30px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  border-radius: 7px;
+  background: #edf1f4;
+  color: #57707d;
+}
+.stat-value {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 5px 0 9px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -1.5px;
+}
+.stat-value > span {
+  font-size: 12px;
+  color: #647680;
+  font-weight: 400;
+  margin-left: 9px;
+}
+.stat-card p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #647680;
+  border-top: 1px solid #eef1f2;
+  padding-top: 10px;
+  margin: 0;
+}
+.stat-card.blue .stat-value,
+.stat-card.blue .stat-icon {
+  color: #4979a8;
+}
+.stat-card.blue .stat-icon {
+  background: #edf3fc;
+}
+.stat-card.amber .stat-value,
+.stat-card.amber .stat-icon {
+  color: #af7e23;
+}
+.stat-card.amber .stat-icon {
+  background: #fff6e4;
+}
+.stat-card.green .stat-value,
+.stat-card.green .stat-icon {
+  color: #3b8265;
+}
+.stat-card.green .stat-icon {
+  background: #edf6ee;
+}
+.attention-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #fffaf0;
+  border: 1px solid #efe1bf;
+  border-radius: 8px;
+  margin-bottom: 27px;
+}
+.attention-icon {
+  border: 1px solid #c7a15a;
+  color: #a37b30;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+.attention-banner strong {
+  display: block;
+  color: #80612c;
+  font-size: 12px;
+}
+.attention-banner div > span {
+  display: block;
+  color: #948061;
+  font-size: 11px;
+  margin-top: 3px;
+}
+.banner-link {
+  color: #96702c;
+  font-size: 11px;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/* 納品一覧と進捗 */
+.tabs {
+  display: flex;
+  padding: 0 24px;
+  gap: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.tabs button {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #80909a;
+  font-size: 11px;
+  padding: 10px 1px 13px;
+  min-height: 44px;
+}
+.tabs button.selected {
+  color: #2b7054;
+  box-shadow: inset 0 -2px #2b7054;
+}
+.list-columns,
+.delivery-row {
+  display: grid;
+  grid-template-columns: 2.2fr 1.4fr 1.15fr 0.85fr 12px;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 24px;
+}
+.list-columns {
+  font-size: 11px;
+  color: #647680;
+  background: #fafbfc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #edf0f2;
+}
+.delivery-row {
+  min-height: 86px;
+  border-bottom: 1px solid #edf0f2;
+}
+.delivery-row:last-child {
+  border-bottom: 0;
+}
+.delivery-row:hover {
+  background: #f9fcfa;
+}
+.supplier-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.supplier-cell strong {
+  font-size: 11px;
+  display: block;
+}
+.supplier-cell small,
+.arrival-cell small {
+  display: block;
+  font-size: 11px;
+  margin-top: 4px;
+  color: #647680;
+}
+.package-icon {
+  width: 35px;
+  height: 38px;
+  border: 1px solid #e4e9ec;
+  border-radius: 7px;
+  background: #fafbfb;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  color: #8a9a9f;
+  flex-shrink: 0;
+}
+.arrival-cell > span {
+  font-size: 11px;
+  font-weight: 500;
+}
+.progress-cell > span {
+  font-size: 12px;
+  color: #3d5361;
+  font-weight: 600;
+}
+.progress-cell small {
+  font-size: 11px;
+  color: #647680;
+  font-weight: 400;
+}
+.progress-track {
+  height: 4px;
+  border-radius: 8px;
+  background: #edf1f2;
+  overflow: hidden;
+  margin-top: 8px;
+  max-width: 114px;
+}
+.progress-track > div {
+  height: 100%;
+  background: #73a48a;
+  border-radius: inherit;
+  transition: width 0.2s;
+}
+.issue-count {
+  display: block;
+  font-size: 11px;
+  color: #b5893d;
+  margin-top: 4px;
+}
+.row-arrow {
+  font-size: 20px;
+  color: #9aa8b0;
+}
+
+/* 検収記録への導線と使い方 */
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 23px;
+  margin-top: 26px;
+}
+.recent .section-header {
+  padding-bottom: 12px;
+}
+.subtle-icon {
+  border: 1px solid #d9e8dd;
+  color: #6b9b7c;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+}
+.recent-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border-bottom: 1px solid #eff2f3;
+}
+.recent-row:last-child {
+  border-bottom: 0;
+}
+.recent-row strong {
+  display: block;
+  font-size: 11px;
+}
+.recent-row small {
+  font-size: 11px;
+  display: block;
+  margin-top: 3px;
+}
+.recent-row > span:last-child {
+  margin-left: auto;
+  color: #98a6ac;
+}
+.receipt-icon {
+  width: 30px;
+  height: 34px;
+  flex-shrink: 0;
+  background: #eff6f1;
+  color: #76a487;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+.guide-card {
+  padding: 25px 28px;
+  border-radius: 10px;
+  background: #edf2ed;
+  border: 1px solid #dce6dc;
+  position: relative;
+  overflow: hidden;
+}
+.guide-card .eyebrow {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+.guide-card h2 {
+  font-size: 21px;
+  color: #365a47;
+  line-height: 1.6;
+}
+.guide-card ol {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 20px;
+}
+.guide-card li {
+  display: flex;
+  gap: 10px;
+  font-size: 11px;
+  color: #667c6e;
+  margin: 8px 0;
+}
+.guide-card li span {
+  color: #71917d;
+  font-size: 11px;
+}
+.guide-card > p:last-child {
+  color: #8a9f8f;
+  font-size: 11px;
+  margin: 0;
+}

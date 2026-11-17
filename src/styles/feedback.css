@@ -1,0 +1,81 @@
+/* 通知・状態 */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.badge-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.badge.green {
+  color: #2c7450;
+  background: #eaf4ec;
+}
+.badge.amber {
+  color: #936011;
+  background: #fff2d9;
+}
+.badge.blue {
+  color: #3c6d9b;
+  background: #eaf2fc;
+}
+.badge.red {
+  color: #aa4840;
+  background: #ffebe8;
+}
+.badge.gray {
+  color: #637783;
+  background: #edf1f4;
+}
+.notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #edf4f0;
+  border: 1px solid #d4e4db;
+  color: #345e4e;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 18px 0;
+  font-size: 13px;
+}
+.notice.error {
+  color: #983c32;
+  background: #fff0ed;
+  border-color: #f0c6be;
+}
+.toast {
+  position: sticky;
+  top: 12px;
+  z-index: 40;
+  margin: 12px 30px;
+  padding: 10px 15px;
+  background: #244e40;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 15px #163c2722;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.toast button {
+  background: transparent;
+  color: white;
+  border: 0;
+}
+.offline {
+  background: #fff0d7;
+  color: #744e14;
+  padding: 12px;
+  text-align: center;
+}

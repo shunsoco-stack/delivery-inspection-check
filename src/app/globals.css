@@ -1,0 +1,11 @@
+@import "../styles/base.css";
+@import "../styles/shell.css";
+@import "../styles/feedback.css";
+@import "../styles/forms.css";
+@import "../styles/dashboard.css";
+@import "../styles/issues.css";
+@import "../styles/inspection.css";
+@import "../styles/record.css";
+@import "../styles/tablet.css";
+@import "../styles/responsive.css";
+@import "../styles/print.css";
